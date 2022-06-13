@@ -1,0 +1,8 @@
+{
+  "highlight_style": "nord",
+  "pdf_options": {
+    "format": "A4",
+    "margin": "20mm 30mm",
+    "printBackground": true
+  }
+}

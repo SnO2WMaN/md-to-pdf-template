@@ -1,0 +1,30 @@
+{
+  "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix", 
+  "customLocalFormatters.formatters": [
+    {
+      "command": "treefmt -q --stdin ${file}",
+      "languages": [
+        "json",
+        "jsonc",
+        "md",
+        "nix",
+        "toml", 
+      ]
+    }
+  ],
+  "[toml]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[nix]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[md]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  }, 
+}

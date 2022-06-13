@@ -1,0 +1,12 @@
+[devshell]
+packages = [
+  "alejandra",
+  "cargo-make",
+  "dprint",
+  "nodejs",
+  "treefmt",
+]
+
+[[commands]]
+package = "treefmt"
+category = "formatter"

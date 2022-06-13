@@ -1,0 +1,15 @@
+[tasks.clean]
+command = "/bin/rm"
+args = ["-rf", "dist"]
+
+[tasks.generate]
+dependencies = ["clean"]
+script = '''
+for md in `find $PWD/src -name "*.md"`
+do
+  distdir=dist/$(dirname $(realpath --relative-to $PWD/src $md))
+
+  mkdir -p $distdir
+  cat "$md" | npx md-to-pdf --basedir $(dirname $md) --config-file $PWD/md-to-pdf.json > $distdir/$(basename $md .md).pdf
+done
+'''
